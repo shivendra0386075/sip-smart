@@ -1,6 +1,5 @@
 import type { Row } from '../lib/finance';
 import { inr } from '../lib/format';
-
 export default function Chart({ rows }: { rows: Row[] }) {
   const W = 640, H = 260, p = 34, n = rows.length, bw = (W - p * 1.5) / n;
   const mx = Math.max(...rows.map((r) => r.value)) || 1, area = H - p - 10;
